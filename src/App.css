@@ -1,38 +1,107 @@
+* {
+  background-color: ;
+}
+
 .App {
   text-align: center;
+  margin-top: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+div h1 {
+  margin-left: 5px;
+
+}
+.what {
+  font-size: 2.8rem;
+  text-shadow: 1px 1px 1px #80ed99;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.addTask {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+  height: 50px;
+  width: 100%px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.addTask input {
+  height: 30px;
+  width: 400px;
+  color: rgb(8, 29, 1);
+  border: 1px solid teal;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.addTask button {
+  width: 80px;
+  height: 30px;
+  margin-left: 20px;
+  text-align: center;
+  border: 1px solid teal;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.addTask button:hover {
+  color: orangered;
+}
+
+.list {
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: auto;
+  width: 100%;
+  padding-top: 10px;
+  
+}
+
+.todo {
+  display: flex;
+  flex-direction: row;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  border: 2px solid #80ed99;
+  border-radius: 10px;
+  height: 60px;
+  width: 500px;
+  margin: 5px auto;
 }
 
-.App-link {
-  color: #61dafb;
+div.todo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.btn {
+  margin-right: 10px;
+  text-align: center;
+}
+
+.todo .delete {
+  height: 25px;
+  width: 25px;
+  margin-left: 20px;
+  border: 2px solid red;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.todo .delete:hover {
+  color: red;
+}
+
+.complete {
+  height: 25px;
+  width: 25px;
+  margin-left: 20px;
+  border: 2px solid #80ed99;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.complete:hover {
+  color:  #38b000;
 }
