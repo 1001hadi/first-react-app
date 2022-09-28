@@ -13,7 +13,7 @@ div h1 {
 }
 .what {
   font-size: 2.8rem;
-  text-shadow: 1px 1px 1px #80ed99;
+  font-weight: bold;
 }
 
 .addTask {

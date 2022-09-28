@@ -1,10 +1,10 @@
-export const Todo = (props) => {
+export const Todo = ({ completed, name, id, completeTodo, deleteTodo}) => {
     return(
-        <div className='todo' style={{backgroundColor: props.completed ? "#80ed99" : ""}}>
-            <h1>{props.name}</h1>
+        <div className='todo' style={{backgroundColor: completed ? "#80ed99" : ""}}>
+         <h1>{name}</h1>
          <div className="btn">
-            <button className="complete" onClick={()=> props.completeTodo(props.id)}>&#10003;</button>
-            <button className="delete" onClick={()=> props.deleteTodo(props.id)}>X</button>
+            <button className="complete" onClick={()=> completeTodo(id)}>&#10003;</button>
+            <button className="delete" onClick={()=> deleteTodo(id)}>X</button>
          </div>
         </div>
     )

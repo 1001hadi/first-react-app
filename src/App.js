@@ -20,23 +20,15 @@ function App() {
 
   const deleteTodo = (id) => setTodos(todos.filter(todo => todo.id !== id));
 
-  const completeTodo = (id) => setTodos(todos.map(todo => {
-    if(todo.id === id) {
-      return {...todo, completed:true}
-    } else {
-      return todo
-    }
-  }))
+  const completeTodo = (id) => setTodos(todos.map(todo => todo.id === id ? {...todo, completed:true} : todo))
   
   return (
     <div className="App">
       <div className='what'>What shoud be done Today?</div>
-
-      <div className="addTask">
+       <div className="addTask">
         <input placeholder='Enter your tasks...' onChange={handleAdd}/>
         <button onClick={addTask}>Add Todo</button>
-      </div>
-
+       </div>
       <div className="list">{todos.map(todo =>{
         return(
           <Todo name={todo.name} id={todo.id} completed={todo.completed} deleteTodo={deleteTodo} completeTodo={completeTodo}/> 
